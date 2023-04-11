@@ -18,5 +18,7 @@ const Divide = (cipars1, cipars2) => {
 }
 
 plusins.addEventListener('click', () => {
-    console.log("Mani nospieda")
+   answer = Add(NparseInt(inputins1.value), parseInt (inputins2.value))
+
+   
 })
