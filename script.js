@@ -1,52 +1,41 @@
-const plusins = document.querySelector('.js-plus');
-const multiply = document.querySelector('.js-multiply');
-const minus = document.querySelector('.js-minus');
-const divide = document.querySelector('.js-divide');
-const inputins1 = document.querySelector('.js-input1');
-const inputins2 = document.querySelector('.js-input2');
-const answer = document.querySelector('.js-result');
+const minus = document.querySelectorAll('.js-minus');
+const plus = document.querySelectorAll('.js-plus')
+const total = document.querySelectorAll('.js-total-result')
+const minusSingleMove = document.querySelector('.js-minus-single-move')
+const answerSingleMove = document.querySelector('.js-answer-single-move')
+const plusSingleMove = document.querySelector('.js-plus-single-move')
 
-const Add = (cipars1, cipars2) => {
-    return cipars1 + cipars2
-}
+console.log (minusSingleMove)
+const refresh = document.querySelector('.js-refresh')
+const reset = document.querySelector('.js-reset')
 
-const Subtract = (cipars1, cipars2) => {
-    return cipars1 - cipars2
-}
-
-const Multiply = (cipars1, cipars2) => {
-    return cipars1 * cipars2
-}
-
-const Divide = (cipars1, cipars2) => {
-    return cipars1 / cipars2
-}
-
-const clear = () => {
-    inputins1.value = ""
-    inputins2.value = ""
-}
-
-plusins.addEventListener('click', () => {
-    answer.textContent = Add(parseInt(inputins1.value),parseInt(inputins2.value))
-
-    clear()
+minus.forEach((element, index) => {
+    element.onclick = () => {
+        total[index].innerHTML = parseInt(total[index].textContent) - 1
+    }
 })
 
-minus.addEventListener('click', () => {
-    answer.textContent = Subtract(parseInt(inputins1.value),parseInt(inputins2.value))
-
-    clear()
+plus.forEach((element, index) => {
+    element.onclick = () => {
+        total[index].innerHTML = parseInt(total[index].textContent) + 1
+    }
 })
 
-multiply.addEventListener('click', () => {
-    answer.textContent = Multiply(parseInt(inputins1.value),parseInt(inputins2.value))
-
-    clear()
+minusSingleMove.addEventListener('click', () => {
+    answerSingleMove.innerHTML = parseInt(answerSingleMove.textContent) - 1
 })
 
-divide.addEventListener('click', () => {
-    answer.textContent = Divide(parseInt(inputins1.value),parseInt(inputins2.value))
+plusSingleMove.addEventListener('click', () => {
+    answerSingleMove.innerHTML = parseInt(answerSingleMove.textContent) + 1
+})
 
-    clear()
+refresh.addEventListener('click', () => {
+    total.innerHTML = Number(total.innerHTML) + Number(answerSingleMove.innerHTML)
+
+    answerSingleMove.innerHTML = '0';
+})
+
+reset.addEventListener('click', () => {
+    total.innerHTML = '0'
+    answerSingleMove.innerHTML = '0'
 })
