@@ -1,63 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <div class="player1">
-        <div class="header_container">
-            <h1>Player1</h1>
-
-            <div>
-                <button class="js-refresh">Atjaunot rezultātu</button>
-                <button class="js-reset">Reset</button>
-            </div>
-        </div>
-        
-        <div class="score_container">
-            <h1>Total</h1>
-            <button class="js-minus">Minus</button>
-            <h2 class="js-total-result">0</h2>
-            <button class="js-plus">plus</button>
-        </div>
-        
-        <div class="move_container">
-            <h1>This move</h1>
-            <button class="js-minus-single-move">Minus</button>
-            <h2 class="js-answer-single-move">0</h2>
-            <button class="js-plus-single-move">plus</button>
-        </div>
+    <h1>Simple calculator</h1>
+    <div class="action_container">
+        <input type="number" class="js-input1 input" placeholder="First number">
+        <button class="operator js-plus"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"><path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"/></svg></button>
+        <button class="operator js-minus"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"><path fill="currentColor" d="M19 12.998H5v-2h14z"/></svg></button>
+        <button class="operator js-multiply"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"/></svg></button>
+        <button class="operator js-divide"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="6" r="1"/><path d="M5 12h14"/><circle cx="12" cy="18" r="1"/></g></svg></button>
+        <input type="number" class="js-input2 input" placeholder="Second number">
     </div>
-    <div class="player1">
-        <div class="header_container">
-            <h1>Player1</h1>
-
-            <div>
-                <button 
-class="js-refresh">Atjaunot rezultātu</button>
-                <button class="js-reset">Reset</button>
-            </div>
-        </div>
-        
-        <div class="score_container">
-            <h1>Total</h1>
-            <button class="js-minus">Minus</button>
-            <h2 class="js-total-result">0</h2>
-            <button class="js-plus">plus</button>
-        </div>
-        
-        <div class="move_container">
-            <h1>This move</h1>
-            <button class="js-minus-single-move">Minus</button>
-            <h2 class="js-answer-single-move">0</h2>
-            <button class="js-plus-single-move">plus</button>
-        </div>
-    </div>
-    
+   
+    <div class="result_container">
+        <img src="barts.png" alt="Barts Simpson">
+        <span class="js-result"></span>
+    </div class="result_text">
 </body>
-<script src="script.js"></script>
+<script src="script.js">
+    
+</script>
 </html>
